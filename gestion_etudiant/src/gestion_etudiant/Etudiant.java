@@ -2,7 +2,7 @@ package gestion_etudiant;
 
 import aiac.gi18.java.complexe.Complexe;
 
-public class Etudiant {
+public class Etudiant implements comparable<Etudiant> {
 	private int id;
 	private String nom ;
 	private double note;
@@ -19,6 +19,17 @@ public class Etudiant {
 				return false ;
 				//Deux Etudiants sans égaux si et seulement s’ils ont la même valeur de id
 				return ((Etudiant)obj).id== this.id ;		
+			}
+			public boolean compareTo (Etudiant e)
+			{
+				if(e.note > this.note)
+					return true;
+				  return false;	
+			}
+			
+			
+			
+				
 			}
 		
 		
